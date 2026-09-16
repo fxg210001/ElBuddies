@@ -4,13 +4,8 @@
 Adafruit_DRV2605 drv;
 
 void setup() {
-  pinMode(ButtonA, INPUT);
-  pinMode(ButtonB, INPUT);
-  pinMode(ButtonC, INPUT);
-  pinMode(ButtonD, INPUT);
 
   Serial.begin(9600);
-  mySoftwareSerial.begin(9600);
 
   Serial.println("Adafruit DRV2605 Basic test");
   if (! drv.begin()) {
