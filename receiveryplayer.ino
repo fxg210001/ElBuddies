@@ -16,6 +16,14 @@ bool lastA = false, lastB = false, lastC = false, lastD = false;
 
 void setup() {
 
+  pinMode(ButtonA, INPUT);
+  pinMode(ButtonB, INPUT);
+  pinMode(ButtonC, INPUT);
+  pinMode(ButtonD, INPUT);
+
+  Serial.begin(9600);
+  mySoftwareSerial.begin(9600);
+
   Serial.println("Initializing DFPlayer...");
   if (!myDFPlayer.begin(mySoftwareSerial)) {
     Serial.println("DFPlayer not found - check wiring/SD card");
