@@ -15,8 +15,8 @@ void setup() {
   }
 
 Serial.println("dfplayer mini online");
-myDFPlayer.volume(20);
-myDFPlayer.play(1);
+myDFPlayer.volume(20); // 0 - 30
+myDFPlayer.play(1); // track number 1-5
 }
 
 
