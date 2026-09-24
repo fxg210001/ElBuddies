@@ -4,8 +4,8 @@ void setup() {
 
   Serial.begin(9600);
 
-  pinMode(5, OUTPUT);
-  digitalWrite(5, LOW);   // Magnet starts OFF
+  pinMode(8, OUTPUT);
+  digitalWrite(8, LOW);   // Magnet starts OFF
 
 }
 
@@ -21,11 +21,11 @@ void loop() {
 
   if (input == 'Y' || input == 'y') {
 
-    digitalWrite(5, HIGH);   // Magnet ON
+    digitalWrite(8, HIGH);   // Magnet ON
 
     delay(3000);            // Keep on for 30 seconds
 
-    digitalWrite(5, LOW);    // Magnet OFF
+    digitalWrite(8, LOW);    // Magnet OFF
 
   }
 
