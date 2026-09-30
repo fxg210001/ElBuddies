@@ -42,6 +42,29 @@ void initHaptics() {
   drvPins.setMode(DRV2605_MODE_INTTRIG);
   drvPins.setWaveform(0, HAPTIC_EFFECT);
   drvPins.setWaveform(1, 0);
+
+  //  if (!drvQT.begin(&Wire1)) {
+  //   Serial.println("Could not find QT DRV2605L");
+  // } else {
+  //   Serial.println("QT DRV2605L found");
+  //   drvQT.selectLibrary(6);
+  //   drvQT.useLRA();
+  //   drvQT.setMode(DRV2605_MODE_INTTRIG);
+  //   drvQT.setWaveform(0, HAPTIC_EFFECT);
+  //   drvQT.setWaveform(1, 0);
+  // }
+
+  // // SDA/SCL pin DRV2605L
+  // if (!drvPins.begin(&Wire)) {
+  //   Serial.println("Could not find pin DRV2605L");
+  // } else {
+  //   Serial.println("Pin DRV2605L found");
+  //   drvPins.selectLibrary(6);
+  //   drvPins.useLRA();
+  //   drvPins.setMode(DRV2605_MODE_INTTRIG);
+  //   drvPins.setWaveform(0, HAPTIC_EFFECT);
+  //   drvPins.setWaveform(1, 0);
+  // }
 }
 
 void setup() {
@@ -55,6 +78,7 @@ void setup() {
   Serial.begin(9600);
   Serial1.begin(9600);
   Wire.begin();
+  Wire1.begin();
   delay(2000);
 
   initHaptics();
