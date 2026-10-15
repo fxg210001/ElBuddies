@@ -1,4 +1,4 @@
-const int EM = 9; 
+const int EM = 8; 
 
 void setup() {
   pinMode(EM, OUTPUT);
