@@ -29,7 +29,7 @@ void setup() {
   }
   Serial.println("DFPlayer ready");
 
-  myDFPlayer.volume(15); // 0-30
+  myDFPlayer.volume(10); // 0-30
 }
 
 void loop() {
@@ -40,22 +40,29 @@ void loop() {
 
   if (a && !lastA) {
     Serial.println("Button A -> track 1");
-    myDFPlayer.play(4); // plays 0001.mp3
+    myDFPlayer.play(10); 
   }
   if (b && !lastB) {
     Serial.println("Button B -> track 2");
-    myDFPlayer.play(1);
+    myDFPlayer.play(5); 
   }
   if (c && !lastC) {
     Serial.println("Button C -> track 3");
-    myDFPlayer.play(1);
+    myDFPlayer.play(6); 
   }
   if (d && !lastD) {
     Serial.println("Button D -> track 4");
-    myDFPlayer.play(1);
-  } 
+    myDFPlayer.play(8);
+    
+   } 
 
   lastA = a; lastB = b; lastC = c; lastD = d;
   delay(50); 
 }
-
+/* 1 - bruh 
+2 - 
+3 - yay
+4 - cry 20 sec
+7 - fart
+9 - child asking for mom
+*/
