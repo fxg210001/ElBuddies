@@ -2,7 +2,6 @@
 #include "Adafruit_DRV2605.h"
 
 Adafruit_DRV2605 drvQT;
-Adafruit_DRV2605 drvPins;
 
 void setup() {
   Serial.begin(9600);
@@ -20,23 +19,11 @@ void setup() {
 
   Serial.println("DRV2605 #1 found!");
 
-  // DRV #2 - normal SDA/SCL pins
-  if (!drvPins.begin(&Wire)) {
-    Serial.println("Could not find DRV2605 #2 on SDA/SCL");
-    while (1) {
-      delay(10);
-    }
-  }
-
-  Serial.println("DRV2605 #2 found!");
-
-  // Configure both for LRA
+  // Configure for LRA
   drvQT.useLRA();
-  drvPins.useLRA();
 
   // LRA waveform library
   drvQT.selectLibrary(6);
-  drvPins.selectLibrary(6);
 
   // Internal trigger mode
   drvQT.setMode(DRV2605_MODE_INTTRIG);
@@ -48,7 +35,7 @@ void setup() {
 uint8_t effect = 1;
 
 void loop() {
-
+// there are about ~120 effects to choose from. these were our main testing ones due to strength
   uint8_t effects[] = {
     4, 7, 10, 12, 14, 15, 17, 27, 44, 45, 47, 48, 49
   };
