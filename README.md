@@ -1,6 +1,6 @@
-# ElBuddies
-This is the repository for the ELBuddy Task Trainer! 
-For reference, the ELBuddy is programmed with an Arduino UNO R4 Wifi.
+# The ELBuddy Task Trainer Repository
+
+The ELBuddy is programmed with an Arduino UNO R4 Wifi.
 
 MAINCODE.ino is the code that is currently programmed onto the manikin. 
 
